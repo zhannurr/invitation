@@ -78,7 +78,7 @@ const App = () => {
 
   const handleFormSubmit = (e: any) => {
     e.preventDefault();
-    // setSubmitted(true);
+    setSubmitted(true);
   };
 
   return (
