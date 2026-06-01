@@ -49,6 +49,7 @@ const App = () => {
 
   const handleOpen = async () => {
     setIsOpen(true);
+    window.scrollTo({ top: 0, behavior: 'instant' });
 
     if (!audioRef.current) return;
 
@@ -128,10 +129,11 @@ const App = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
               style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}
             >
-              <h2 className="script-font" style={{ fontSize: '4rem', color: 'var(--dark-brown)' }}>Зейнет Жас</h2>
-              <h1 style={{ fontSize: '1.5rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)', letterSpacing: '2px' }}>Өзбекбай Жанна</h1>
-              <h2 className="script-font" style={{ fontSize: '2rem', color: 'var(--dark-brown)' }}>Сүндет той</h2>
-              <h1 style={{ fontSize: '1.5rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)', letterSpacing: '2px' }}>Санжар Ахмедияр</h1>
+              <h2 className="script-font">Зейнет Жас</h2>
+              <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}> Өзбекбай Жанна</h1>
+              <h2 className="script-font" style={{ lineHeight: 1.5 }}>&</h2>
+              <h2 className="script-font">Сүндет той</h2>
+              <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}>Санжар Ахмедияр</h1>
               <p style={{ marginTop: '20px', fontFamily: 'Lora', color: '#666', fontStyle: 'italic' }}>Шақыру билеті</p>
 
               <button
@@ -139,7 +141,7 @@ const App = () => {
                 className="submit-button"
                 style={{ marginTop: '50px', padding: '15px 50px', fontSize: '1.6rem' }}
               >
-                Ашу
+                АШУ
               </button>
             </motion.div>
           </motion.div>
@@ -208,8 +210,11 @@ const App = () => {
           </div>
 
           <div style={{ marginTop: '20px' }}>
-            <h2 className="script-font">Зейнет Жас Өзбекбай Жанна</h2>
-            <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}>Сүндет той Санжар Ахмедияр</h1>
+            <h2 className="script-font">Зейнет Жас</h2>
+             <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}> Өзбекбай Жанна</h1>
+              <h2 className="script-font" style={{ lineHeight: 1.5 }}>&</h2>
+             <h2 className="script-font">Сүндет той</h2>
+            <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}>Санжар Ахмедияр</h1>
           </div>
         </motion.section>
 
@@ -242,12 +247,12 @@ const App = () => {
         {/* Intro Text */}
         <motion.section
           className="section"
-          style={{ borderBottom: '1px solid #ddd', borderTop: '1px solid #ddd', margin: '0 20px' }}
+          style={{ borderBottom: '1px solid rgba(212,175,55,0.3)', borderTop: '1px solid rgba(212,175,55,0.3)', margin: '0 20px' }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <p className="script-font" style={{ fontSize: '1.8rem' }}>
+          <p className="script-font" style={{ fontSize: '2.6rem' }}>
             Құрметті ағайын-туыс, бауырлар, құда-жекжат, нағашы-жиен, бөлелер, дос-жарандар, әріптестер мен көршілер!
           </p>
         </motion.section>
@@ -259,18 +264,18 @@ const App = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p style={{ margin: '20px 0', fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
-            СІЗДЕРДІ цгшурвагшцурагТ ТОЙЫНА АРНАЛҒАН АҚ ДАСТАРХАНЫМЫЗДЫҢ ҚАДІРЛІ ҚОНАҒЫ БОЛУҒА ШАҚЫРАМЫЗ!
+          <p style={{ margin: '20px 0', fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--text-light)' }}>
+            Сіздерді асқар тау әкеміз Өзбекбай мен аяулы анамыз Жаннаның зейнетке шығу тойына және ұлдарымыз Санжар мен Ахмедиярдың сүндет тойына арналған ТОЙЫНА АРНАЛҒАН АҚ ДАСТАРХАНЫМЫЗДЫҢ ҚАДІРЛІ ҚОНАҒЫ БОЛУҒА ШАҚЫРАМЫЗ!
           </p>
 
           <div style={{ margin: '40px 0' }}>
-            <h3 className="script-font" style={{ fontSize: '2.4rem' }}>Той салтанаты:</h3>
-            <p style={{ fontSize: '1.3rem', fontWeight: 'bold' }}>01 ТАМЫЗ 2026 ЖЫЛ</p>
-            <p style={{ fontSize: '1.1rem' }}>САҒАТ 20:00-ДЕ</p>
+            <h3 className="script-font" style={{ fontSize: '2.6rem' }}>Той салтанаты:</h3>
+            <p style={{ fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--text-light)' }}>01 ТАМЫЗ 2026 ЖЫЛ</p>
+            <p style={{ fontSize: '1.1rem', color: 'var(--text-light)' }}>САҒАТ 20:00-ДЕ</p>
           </div>
 
           {/* Simple Calendar View Placeholder */}
-          <div className="calendar-container">
+          <div className="calendar-container" style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(212,175,55,0.3)', color: 'var(--text-light)' }}>
             <p style={{ borderBottom: '1px solid #eee', paddingBottom: '10px', marginBottom: '10px', fontSize: '0.9rem', fontWeight: 'bold' }}>ТАМЫЗ 2026</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: '5px', fontSize: '0.8rem' }}>
               {['ДС', 'СС', 'СР', 'БС', 'ЖМ', 'СБ', 'ЖБ'].map(d => <span key={d} style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{d}</span>)}
@@ -291,8 +296,8 @@ const App = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h3 className="script-font" style={{ fontSize: '2.4rem' }}>Мекен-жайымыз:</h3>
-          <p style={{ margin: '15px 0', textTransform: 'uppercase' }}>
+          <h3 className="script-font" style={{ fontSize: '2.6rem' }}>Мекен-жайымыз:</h3>
+          <p style={{ margin: '15px 0', textTransform: 'uppercase', color: 'var(--text-light)' }}>
             Жетісай қаласы<br />
             <strong> "Aksumbe ball room" мейрамханасы</strong>
           </p>
@@ -316,7 +321,7 @@ const App = () => {
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
         >
-          <h3 className="script-font" style={{ fontSize: '2rem' }}>Той салтанатына дейін:</h3>
+          <h3 className="script-font" style={{ fontSize: '2.6rem' }}>Той салтанатына дейін:</h3>
           <div className="countdown-timer">
             <div className="countdown-item">
               <div className="countdown-value">{timeLeft.days}</div>
@@ -354,19 +359,19 @@ const App = () => {
           />
 
           <div style={{ position: 'relative', zIndex: 1 }}>
-            <h3 className="script-font" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Той иелері:</h3>
+            <h3 className="script-font" style={{ fontSize: '2.6rem', marginBottom: '10px' }}>Той иелері:</h3>
             <p className="script-font" style={{ fontSize: 'clamp(2rem, 9.5vw, 3.2rem)', color: 'var(--dark-brown)', whiteSpace: 'nowrap' }}>
               Мико
             </p>
 
 
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '30px auto', width: '250px' }}>
-            <div style={{ flex: 1, height: '1px', backgroundColor: 'var(--dark-brown)', position: 'relative', top: '2px' }}>
-              <div style={{ position: 'absolute', left: '0', top: '-2px', width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--dark-brown)' }}></div>
+            <div style={{ flex: 1, height: '1px', backgroundColor: 'var(--gold)', position: 'relative', top: '2px' }}>
+              <div style={{ position: 'absolute', left: '0', top: '-2px', width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--gold)' }}></div>
             </div>
-            <div style={{ width: '8px', height: '8px', backgroundColor: 'var(--dark-brown)', transform: 'rotate(45deg)', margin: '0 15px' }}></div>
-            <div style={{ flex: 1, height: '1px', backgroundColor: 'var(--dark-brown)', position: 'relative', top: '2px' }}>
-              <div style={{ position: 'absolute', right: '0', top: '-2px', width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--dark-brown)' }}></div>
+            <div style={{ width: '8px', height: '8px', backgroundColor: 'var(--gold)', transform: 'rotate(45deg)', margin: '0 15px' }}></div>
+            <div style={{ flex: 1, height: '1px', backgroundColor: 'var(--gold)', position: 'relative', top: '2px' }}>
+              <div style={{ position: 'absolute', right: '0', top: '-2px', width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--gold)' }}></div>
             </div>
           </div>
       </div>
@@ -381,7 +386,7 @@ const App = () => {
 }
 whileInView = {{ y: 0, opacity: 1 }}
         >
-  <h3 className="script-font" style={{ fontSize: '2.5rem', marginBottom: '20px' }}>
+  <h3 className="script-font" style={{ fontSize: '2.6rem', marginBottom: '20px' }}>
     Тойға қатысуыңызды растауыңызды сұраймыз!
   </h3>
 
@@ -447,8 +452,8 @@ whileInView = {{ y: 0, opacity: 1 }}
         </motion.section >
 
   {/* Footer */ }
-  < footer className = "section" style = {{ borderTop: '1px solid #ddd', marginTop: '40px' }}>
-          <p className="script-font" style={{ fontSize: '1.8rem' }}>Келіңіздер, тойымыздың қадірлі қонағы болыңыздар!</p>
+  < footer className = "section" style = {{ borderTop: '1px solid rgba(212,175,55,0.3)', marginTop: '40px' }}>
+          <p className="script-font" style={{ fontSize: '2.6rem' }}>Келіңіздер, тойымыздың қадірлі қонағы болыңыздар!</p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', marginTop: '30px' }}>
             <motion.a
               href="https://github.com/zhannurr"
