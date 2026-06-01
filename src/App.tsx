@@ -14,7 +14,7 @@ const App = () => {
     seconds: 0,
   });
 
-  const targetDate = new Date('2026-05-31T18:00:00');
+  const targetDate = new Date('2026-06-06T18:00:00');
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -243,18 +243,18 @@ const App = () => {
 
           <div style={{ margin: '40px 0' }}>
             <h3 className="script-font" style={{ fontSize: '2.4rem' }}>Той салтанаты:</h3>
-            <p style={{ fontSize: '1.3rem', fontWeight: 'bold' }}>31 МАМЫР 2026 ЖЫЛ</p>
+            <p style={{ fontSize: '1.3rem', fontWeight: 'bold' }}>06 МАУСЫМ 2026 ЖЫЛ</p>
             <p style={{ fontSize: '1.1rem' }}>САҒАТ 18:00-ДЕ</p>
           </div>
 
           {/* Simple Calendar View Placeholder */}
           <div className="calendar-container">
-            <p style={{ borderBottom: '1px solid #eee', paddingBottom: '10px', marginBottom: '10px', fontSize: '0.9rem', fontWeight: 'bold' }}>МАМЫР 2026</p>
+            <p style={{ borderBottom: '1px solid #eee', paddingBottom: '10px', marginBottom: '10px', fontSize: '0.9rem', fontWeight: 'bold' }}>МАУСЫМ 2026</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: '5px', fontSize: '0.8rem' }}>
               {['ДС', 'СС', 'СР', 'БС', 'ЖМ', 'СБ', 'ЖБ'].map(d => <span key={d} style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{d}</span>)}
-              {Array.from({ length: 4 }).map((_, i) => <span key={`empty-${i}`} />)}
+              {Array.from({ length: 0 }).map((_, i) => <span key={`empty-${i}`} />)}
               {Array.from({ length: 31 }, (_, i) => i + 1).map(day => (
-                <span key={day} style={day === 31 ? { backgroundColor: 'var(--gold)', color: 'white', borderRadius: '50%', padding: '2px', fontWeight: 'bold' } : {}}>
+                <span key={day} style={day === 6 ? { backgroundColor: 'var(--gold)', color: 'white', borderRadius: '50%', padding: '2px', fontWeight: 'bold' } : {}}>
                   {day}
                 </span>
               ))}
@@ -339,90 +339,93 @@ const App = () => {
 
 
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '30px auto', width: '250px' }}>
-              <div style={{ flex: 1, height: '1px', backgroundColor: 'var(--dark-brown)', position: 'relative', top: '2px' }}>
-                <div style={{ position: 'absolute', left: '0', top: '-2px', width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--dark-brown)' }}></div>
-              </div>
-              <div style={{ width: '8px', height: '8px', backgroundColor: 'var(--dark-brown)', transform: 'rotate(45deg)', margin: '0 15px' }}></div>
-              <div style={{ flex: 1, height: '1px', backgroundColor: 'var(--dark-brown)', position: 'relative', top: '2px' }}>
-                <div style={{ position: 'absolute', right: '0', top: '-2px', width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--dark-brown)' }}></div>
-              </div>
+            <div style={{ flex: 1, height: '1px', backgroundColor: 'var(--dark-brown)', position: 'relative', top: '2px' }}>
+              <div style={{ position: 'absolute', left: '0', top: '-2px', width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--dark-brown)' }}></div>
+            </div>
+            <div style={{ width: '8px', height: '8px', backgroundColor: 'var(--dark-brown)', transform: 'rotate(45deg)', margin: '0 15px' }}></div>
+            <div style={{ flex: 1, height: '1px', backgroundColor: 'var(--dark-brown)', position: 'relative', top: '2px' }}>
+              <div style={{ position: 'absolute', right: '0', top: '-2px', width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'var(--dark-brown)' }}></div>
             </div>
           </div>
-        </motion.section>
+      </div>
+    </motion.section >
 
 
-        {/* RSVP Form - Integrated with Google Forms but custom UI */}
-        <motion.section
-          className="section rsvp-form"
-          id="rsvp"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+      {/* RSVP Form - Integrated with Google Forms but custom UI */ }
+      < motion.section
+  className = "section rsvp-form"
+  id = "rsvp"
+  initial = {{ y: 50, opacity: 0 }
+}
+whileInView = {{ y: 0, opacity: 1 }}
         >
-          <h3 className="script-font" style={{ fontSize: '2.5rem', marginBottom: '20px' }}>
-            Тойға қатысуыңызды растауыңызды сұраймыз!
-          </h3>
+  <h3 className="script-font" style={{ fontSize: '2.5rem', marginBottom: '20px' }}>
+    Тойға қатысуыңызды растауыңызды сұраймыз!
+  </h3>
 
-          {!submitted ? (
-            <>
-              <p style={{ fontSize: '1rem', marginBottom: '30px', padding: '0 5%', fontWeight: '500' }}>
-                Аты-жөніңіз (жұбыңызбен келетін болсаңыз, есімдеріңізді бірге жазуыңызды өтінеміз)
-              </p>
+{
+  !submitted ? (
+    <>
+      <p style={{ fontSize: '1rem', marginBottom: '30px', padding: '0 5%', fontWeight: '500' }}>
+        Аты-жөніңіз (жұбыңызбен келетін болсаңыз, есімдеріңізді бірге жазуыңызды өтінеміз)
+      </p>
 
-              <form
-                onSubmit={handleFormSubmit}
-                style={{ maxWidth: '450px', margin: '0 auto' }}
-              >
-                <input
-                  type="text"
-                  name="entry.1323092507"
-                  className="form-input"
-                  placeholder="Есіміңіз"
-                  required
-                />
+      <form
+        onSubmit={handleFormSubmit}
+        style={{ maxWidth: '450px', margin: '0 auto' }}
+      >
+        <input
+          type="text"
+          name="entry.1323092507"
+          className="form-input"
+          placeholder="Есіміңіз"
+          required
+        />
 
-                <div style={{ textAlign: 'left', margin: '30px 10%' }}>
-                  {[
-                    { label: 'Келемін', val: 'Келемін' },
-                    { label: 'Жұбыммен келемін', val: 'Жұбыммен келемін' },
-                    { label: 'Өкінішке орай, қатыса алмаймын', val: 'Өкінішке орай, қатыса алмаймын' }
-                  ].map((option, idx) => (
-                    <label key={idx} style={{ display: 'flex', alignItems: 'center', margin: '20px 0', fontSize: '1.2rem', cursor: 'pointer' }}>
-                      <input
-                        type="radio"
-                        name="entry.533510887"
-                        value={option.val}
-                        required
-                        style={{ width: '24px', height: '24px', marginRight: '15px', accentColor: 'var(--dark-brown)' }}
-                      />
-                      <span style={{ fontFamily: 'Lora, serif' }}>{option.label}</span>
-                    </label>
-                  ))}
-                </div>
+        <div style={{ textAlign: 'left', margin: '30px 10%' }}>
+          {[
+            { label: 'Келемін', val: 'Келемін' },
+            { label: 'Жұбыммен келемін', val: 'Жұбыммен келемін' },
+            { label: 'Өкінішке орай, қатыса алмаймын', val: 'Өкінішке орай, қатыса алмаймын' }
+          ].map((option, idx) => (
+            <label key={idx} style={{ display: 'flex', alignItems: 'center', margin: '20px 0', fontSize: '1.2rem', cursor: 'pointer' }}>
+              <input
+                type="radio"
+                name="entry.533510887"
+                value={option.val}
+                required
+                style={{ width: '24px', height: '24px', marginRight: '15px', accentColor: 'var(--dark-brown)' }}
+              />
+              <span style={{ fontFamily: 'Lora, serif' }}>{option.label}</span>
+            </label>
+          ))}
+        </div>
 
-                <motion.button
-                  type="submit"
-                  className="submit-button"
-                  whileHover={{ scale: 1.05, backgroundColor: '#5c4434' }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Жіберу
-                </motion.button>
-              </form>
-            </>
-          ) : (
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              style={{ padding: '40px 20px' }}
-            >
-              <h3 className="script-font" style={{ fontSize: '2.5rem', color: 'var(--gold)' }}>Рақмет!</h3>
-              <p style={{ fontSize: '1.2rem', marginTop: '10px' }}>Жауабыңыз қабылданды.</p>
-            </motion.div>
-          )}
-        </motion.section>
+        <motion.button
+          type="submit"
+          className="submit-button"
+          whileHover={{ scale: 1.05, backgroundColor: '#5c4434' }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Жіберу
+        </motion.button>
+      </form>
+    </>
+  ) : (
+  <motion.div
+    initial={{ scale: 0.8, opacity: 0 }}
+    animate={{ scale: 1, opacity: 1 }}
+    style={{ padding: '40px 20px' }}
+  >
+    <h3 className="script-font" style={{ fontSize: '2.5rem', color: 'var(--gold)' }}>Рақмет!</h3>
+    <p style={{ fontSize: '1.2rem', marginTop: '10px' }}>Жауабыңыз қабылданды.</p>
+  </motion.div>
+)
+}
+        </motion.section >
 
-        {/* Footer */}
-        <footer className="section" style={{ borderTop: '1px solid #ddd', marginTop: '40px' }}>
+  {/* Footer */ }
+  < footer className = "section" style = {{ borderTop: '1px solid #ddd', marginTop: '40px' }}>
           <p className="script-font" style={{ fontSize: '1.8rem' }}>Келіңіздер, тойымыздың қадірлі қонағы болыңыздар!</p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', marginTop: '30px' }}>
             <motion.a
@@ -434,8 +437,8 @@ const App = () => {
               <img src={githubIcon} alt="GitHub" style={{ width: '30px', height: '30px', objectFit: 'contain' }} />
             </motion.a>
           </div>
-        </footer>
-      </div>
+        </footer >
+      </div >
     </>
   );
 };
