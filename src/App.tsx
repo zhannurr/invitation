@@ -1,4 +1,4 @@
-import { type FormEvent, useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
 import githubIcon from './assets/githubicon.png';
 import dgisIcon from './assets/2gisicon.png';
@@ -76,8 +76,9 @@ const App = () => {
 
 
 
-  const handleFormSubmit = () => {
-    setSubmitted(true);
+  const handleFormSubmit = (e: any) => {
+    e.preventDefault();
+    // setSubmitted(true);
   };
 
   return (
