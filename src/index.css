@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Marck+Script&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+  --gold: #c39b6d;
+  --dark-brown: #4a3728;
+  --paper: #fdfaf4;
+  --accent: #d4af37;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lora', serif;
+  background-color: #e0e0e0;
+  color: var(--dark-brown);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.app-container {
+  max-width: 500px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--paper);
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1,
+h2 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+}
+
+.script-font {
+  font-family: 'Marck Script', cursive;
+  font-size: 2.8rem;
+  color: var(--dark-brown);
+  line-height: 1.2;
+}
+
+.ornament-spinning {
+  width: 240%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 40s linear infinite;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.child-photo-container {
+  width: 100%;
+  height: 500px;
+  margin: 20px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.child-photo-placeholder {
+  width: 100%;
+  height: 500px;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-container {
+  background: white;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 320px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.rsvp-form {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin: 40px 20px;
+}
+
+.form-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px 25px;
+  border: 1.5px solid var(--dark-brown);
+  border-radius: 50px;
+  background: white;
+  font-family: 'Marck Script', cursive;
+  font-size: 1.6rem;
+  color: var(--dark-brown);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: #a0a0a0;
+  opacity: 0.7;
+}
+
+.form-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 10px rgba(195, 155, 109, 0.2);
+}
+
+.submit-button {
+  background-color: var(--dark-brown);
+  color: white;
+  padding: 12px 60px;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Marck Script', cursive;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-top: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.countdown-value {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.countdown-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
