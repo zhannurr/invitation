@@ -300,7 +300,7 @@ const App = () => {
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
             <motion.a
-              href="https://2gis.kz/turkestan/search/Aksumbe%20ball%20room%20%D0%B6%D0%B5%D1%82%D1%8B%D1%81%D0%B0%D0%B9/firm/70000001059371754/68.291196%2C43.327275?m=68.617041%2C43.436904%2F8.2"
+              href="https://2gis.kz/firm/70000001099330175/68.330162%2C40.786208"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: 'var(--gold)', display: 'flex', flexDirection: 'column', alignItems: 'center', textDecoration: 'none' }}
