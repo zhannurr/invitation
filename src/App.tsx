@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
 import githubIcon from './assets/githubicon.png';
 import dgisIcon from './assets/2gisicon.png';
-import tukaPhoto from './assets/Tuka.png';
+import tukaPhoto from './assets/Tuka.webp';
 import backgroundMusic from './assets/music.mp3';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -14,7 +14,7 @@ const App = () => {
     seconds: 0,
   });
 
-  const targetDate = new Date('2026-06-06T18:00:00');
+  const targetDate = new Date('2026-08-01T20:00:00');
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -154,6 +154,28 @@ const App = () => {
           preload="auto"
         />
 
+        {/* Global Background Ornaments */}
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0, overflow: 'hidden' }}>
+          <motion.img 
+            src="/ornament.webp" 
+            style={{ position: 'absolute', top: '30%', left: '-20%', width: '60vmin', maxWidth: '400px', opacity: 0.1 }} 
+            animate={{ rotate: 360 }} 
+            transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
+          />
+          <motion.img 
+            src="/ornament.webp" 
+            style={{ position: 'absolute', top: '45%', right: '-25%', width: '70vmin', maxWidth: '500px', opacity: 0.08 }} 
+            animate={{ rotate: -360 }} 
+            transition={{ duration: 75, repeat: Infinity, ease: 'linear' }}
+          />
+          <motion.img 
+            src="/ornament.webp" 
+            style={{ position: 'absolute', top: '75%', left: '10%', width: '50vmin', maxWidth: '350px', opacity: 0.12 }} 
+            animate={{ rotate: 360 }} 
+            transition={{ duration: 50, repeat: Infinity, ease: 'linear' }}
+          />
+        </div>
+
         {/* Header / Play Icon */}
         <motion.section
           className="section"
@@ -243,18 +265,18 @@ const App = () => {
 
           <div style={{ margin: '40px 0' }}>
             <h3 className="script-font" style={{ fontSize: '2.4rem' }}>Той салтанаты:</h3>
-            <p style={{ fontSize: '1.3rem', fontWeight: 'bold' }}>06 МАУСЫМ 2026 ЖЫЛ</p>
-            <p style={{ fontSize: '1.1rem' }}>САҒАТ 18:00-ДЕ</p>
+            <p style={{ fontSize: '1.3rem', fontWeight: 'bold' }}>01 ТАМЫЗ 2026 ЖЫЛ</p>
+            <p style={{ fontSize: '1.1rem' }}>САҒАТ 20:00-ДЕ</p>
           </div>
 
           {/* Simple Calendar View Placeholder */}
           <div className="calendar-container">
-            <p style={{ borderBottom: '1px solid #eee', paddingBottom: '10px', marginBottom: '10px', fontSize: '0.9rem', fontWeight: 'bold' }}>МАУСЫМ 2026</p>
+            <p style={{ borderBottom: '1px solid #eee', paddingBottom: '10px', marginBottom: '10px', fontSize: '0.9rem', fontWeight: 'bold' }}>ТАМЫЗ 2026</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: '5px', fontSize: '0.8rem' }}>
               {['ДС', 'СС', 'СР', 'БС', 'ЖМ', 'СБ', 'ЖБ'].map(d => <span key={d} style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{d}</span>)}
-              {Array.from({ length: 0 }).map((_, i) => <span key={`empty-${i}`} />)}
+              {Array.from({ length: 5 }).map((_, i) => <span key={`empty-${i}`} />)}
               {Array.from({ length: 31 }, (_, i) => i + 1).map(day => (
-                <span key={day} style={day === 6 ? { backgroundColor: 'var(--gold)', color: 'white', borderRadius: '50%', padding: '2px', fontWeight: 'bold' } : {}}>
+                <span key={day} style={day === 1 ? { backgroundColor: 'var(--gold)', color: 'white', borderRadius: '50%', padding: '2px', fontWeight: 'bold' } : {}}>
                   {day}
                 </span>
               ))}
@@ -271,12 +293,12 @@ const App = () => {
         >
           <h3 className="script-font" style={{ fontSize: '2.4rem' }}>Мекен-жайымыз:</h3>
           <p style={{ margin: '15px 0', textTransform: 'uppercase' }}>
-            Шымкент увсаукацу<br />
-            <strong>"" ТОЙХАНАСЫ</strong>
+            Жетісай қаласы<br />
+            <strong> "Aksumbe ball room" мейрамханасы</strong>
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
             <motion.a
-              href="https://2gis.kz/shymkent/firm/70000001034423354"
+              href="https://2gis.kz/turkestan/search/Aksumbe%20ball%20room%20%D0%B6%D0%B5%D1%82%D1%8B%D1%81%D0%B0%D0%B9/firm/70000001059371754/68.291196%2C43.327275?m=68.617041%2C43.436904%2F8.2"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: 'var(--gold)', display: 'flex', flexDirection: 'column', alignItems: 'center', textDecoration: 'none' }}
