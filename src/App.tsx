@@ -261,8 +261,8 @@ const App = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p style={{ margin: '20px 0', fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--text-light)' }}>
-            Сіздерді асқар тау әкеміз Өзбекбай мен аяулы анамыз Жаннаның зейнетке шығу тойы және ұлдарымыз Санжар мен Ахмедиярдың сүндет тойына арналған АҚ ДАСТАРХАНЫМЫЗДЫҢ ҚАДІРЛІ ҚОНАҒЫ БОЛУҒА ШАҚЫРАМЫЗ!
+          <p style={{ margin: '20px 0', fontSize: '1.1rem', letterSpacing: '1px', color: 'var(--text-light)' }}>
+            Сіздерді асқар тау әкеміз Өзбекбай мен аяулы анамыз Жаннаның зейнетке шығу тойы және ұлдарымыз Санжар мен Ахмедиярдың сүндет тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!
           </p>
 
           <div style={{ margin: '40px 0' }}>
@@ -358,7 +358,7 @@ const App = () => {
           <div style={{ position: 'relative', zIndex: 1 }}>
             <h3 className="script-font" style={{ fontSize: '2.6rem', marginBottom: '10px' }}>Той иелері:</h3>
             <p className="script-font" style={{ fontSize: 'clamp(2rem, 9.5vw, 3.2rem)', color: 'var(--dark-brown)', whiteSpace: 'nowrap' }}>
-              Өзбекбай & Жанна
+              Дархан & Үміт
             </p>
 
 
