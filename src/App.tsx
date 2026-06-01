@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { type FormEvent, useState, useEffect, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
 import githubIcon from './assets/githubicon.png';
 import dgisIcon from './assets/2gisicon.png';
@@ -37,7 +37,7 @@ const App = () => {
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const handleOpen = async () => {
     setIsOpen(true);
@@ -73,30 +73,11 @@ const App = () => {
 
   const [submitted, setSubmitted] = useState(false);
 
-  const [formState, setFormState] = useState({
-    name: '',
-    attendance: '',
-  });
 
-  const handleInputChange = (e) => {
-    setFormState({ ...formState, [e.target.name]: e.target.value });
-  };
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
 
-    const formData = new FormData(e.target);
-
-    fetch('https://docs.google.com/forms/d/e/1FAIpQLSexWRkDrdq9KRoftfjqB-EBaIljH7CLkHJCLoPm6-t_LbajrA/formResponse', {
-      method: 'POST',
-      mode: 'no-cors',
-      body: formData
-    }).then(() => {
-      setSubmitted(true);
-    }).catch((err) => {
-      console.error('Submission error', err);
-      setSubmitted(true);
-    });
+  const handleFormSubmit = () => {
+    setSubmitted(true);
   };
 
   return (
@@ -152,8 +133,10 @@ const App = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
               style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}
             >
-              <h2 className="script-font" style={{ fontSize: '4rem', color: 'var(--dark-brown)' }}>Тәуекел</h2>
-              <h1 style={{ fontSize: '1.5rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)', letterSpacing: '2px' }}>СҮНДЕТ ТОЙ</h1>
+              <h2 className="script-font" style={{ fontSize: '4rem', color: 'var(--dark-brown)' }}>Зейнет Жас</h2>
+              <h1 style={{ fontSize: '1.5rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)', letterSpacing: '2px' }}>Өзбекбай Жанна</h1>
+              <h2 className="script-font" style={{ fontSize: '2rem', color: 'var(--dark-brown)' }}>Сүндет той</h2>
+              <h1 style={{ fontSize: '1.5rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)', letterSpacing: '2px' }}>Санжар Ахмедияр</h1>
               <p style={{ marginTop: '20px', fontFamily: 'Lora', color: '#666', fontStyle: 'italic' }}>Шақыру билеті</p>
 
               <button
@@ -208,8 +191,8 @@ const App = () => {
           </div>
 
           <div style={{ marginTop: '20px' }}>
-            <h2 className="script-font">Тәуекел</h2>
-            <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}>СҮНДЕТ ТОЙ</h1>
+            <h2 className="script-font">Зейнет Жас Өзбекбай Жанна</h2>
+            <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}>Сүндет той Санжар Ахмедияр</h1>
           </div>
         </motion.section>
 
@@ -260,7 +243,7 @@ const App = () => {
           transition={{ duration: 0.8 }}
         >
           <p style={{ margin: '20px 0', fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
-            СІЗДЕРДІ ҰЛЫМЫЗ ТӘУЕКЕЛДІҢ СҮНДЕТ ТОЙЫНА АРНАЛҒАН АҚ ДАСТАРХАНЫМЫЗДЫҢ ҚАДІРЛІ ҚОНАҒЫ БОЛУҒА ШАҚЫРАМЫЗ!
+            СІЗДЕРДІ цгшурвагшцурагТ ТОЙЫНА АРНАЛҒАН АҚ ДАСТАРХАНЫМЫЗДЫҢ ҚАДІРЛІ ҚОНАҒЫ БОЛУҒА ШАҚЫРАМЫЗ!
           </p>
 
           <div style={{ margin: '40px 0' }}>
@@ -293,8 +276,8 @@ const App = () => {
         >
           <h3 className="script-font" style={{ fontSize: '2.4rem' }}>Мекен-жайымыз:</h3>
           <p style={{ margin: '15px 0', textTransform: 'uppercase' }}>
-            Шымкент қаласы, Тамерлановское шоссе, 175Б<br />
-            <strong>"Golden Palace" ТОЙХАНАСЫ</strong>
+            Шымкент увсаукацу<br />
+            <strong>"" ТОЙХАНАСЫ</strong>
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
             <motion.a
@@ -370,7 +353,7 @@ const App = () => {
           <div style={{ position: 'relative', zIndex: 1 }}>
             <h3 className="script-font" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Той иелері:</h3>
             <p className="script-font" style={{ fontSize: 'clamp(2rem, 9.5vw, 3.2rem)', color: 'var(--dark-brown)', whiteSpace: 'nowrap' }}>
-              Бауыржан - Қарлығаш
+              Мико
             </p>
 
 
@@ -462,7 +445,7 @@ const App = () => {
           <p className="script-font" style={{ fontSize: '1.8rem' }}>Келіңіздер, тойымыздың қадірлі қонағы болыңыздар!</p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', marginTop: '30px' }}>
             <motion.a
-              href="https://github.com/meruyert4"
+              href="https://github.com/zhannurr"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
