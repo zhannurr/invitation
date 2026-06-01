@@ -358,7 +358,7 @@ const App = () => {
           <div style={{ position: 'relative', zIndex: 1 }}>
             <h3 className="script-font" style={{ fontSize: '2.6rem', marginBottom: '10px' }}>Той иелері:</h3>
             <p className="script-font" style={{ fontSize: 'clamp(2rem, 9.5vw, 3.2rem)', color: 'var(--dark-brown)', whiteSpace: 'nowrap' }}>
-              Мико
+              Өзбекбай & Жанна
             </p>
 
 
