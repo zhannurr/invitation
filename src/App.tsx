@@ -39,6 +39,14 @@ const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
+  useEffect(() => {
+    if (!isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isOpen]);
+
   const handleOpen = async () => {
     setIsOpen(true);
 
@@ -93,8 +101,8 @@ const App = () => {
               position: 'fixed',
               top: 0,
               left: 0,
-              width: '100vw',
-              height: '100vh',
+              width: '100dvw',
+              height: '100dvh',
               backgroundColor: '#f8f5f0',
               backgroundImage: 'url("https://www.transparenttextures.com/patterns/cream-paper.png")',
               zIndex: 9999,
@@ -106,27 +114,13 @@ const App = () => {
             }}
           >
             {/* Background spinning ornament */}
-            <div style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              width: '160vmin',
-              opacity: 0.15,
-              zIndex: 0,
-              pointerEvents: 'none',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>
-              <motion.img
-                src="/ornament.webp"
-                alt="spinning background ornament"
-                style={{ width: '100%' }}
-                animate={{ rotate: 360 }}
-                transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
-              />
-            </div>
+            <motion.img
+              src="/ornament.webp"
+              alt="spinning background ornament"
+              className="ornament-spinning"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
+            />
 
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
@@ -152,7 +146,7 @@ const App = () => {
         )}
       </AnimatePresence>
 
-      <div className="app-container" style={{ height: isOpen ? 'auto' : '100vh', overflow: isOpen ? 'visible' : 'hidden' }}>
+      <div className="app-container">
         <audio
           ref={audioRef}
           src={backgroundMusic}
@@ -204,9 +198,9 @@ const App = () => {
               src="/ornament.webp"
               alt="ornament"
               className="ornament-spinning"
-              style={{ width: '150vw', opacity: 0.4, zIndex: 0 }}
+              style={{ opacity: 0.35 }}
               animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
             />
             <motion.div
               className="child-photo-placeholder"
@@ -329,27 +323,13 @@ const App = () => {
           transition={{ duration: 0.8 }}
           style={{ padding: '120px 20px 140px', position: 'relative', overflow: 'hidden' }}
         >
-          <div style={{
-            position: 'absolute',
-            right: '-40%',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            width: '90%',
-            opacity: 0.15,
-            zIndex: 0,
-            pointerEvents: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            <motion.img
-              src="/ornament.webp"
-              alt="spinning background ornament"
-              style={{ width: '100%' }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
-            />
-          </div>
+          <motion.img
+            src="/ornament.webp"
+            alt="spinning background ornament"
+            className="ornament-spinning"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
+          />
 
           <div style={{ position: 'relative', zIndex: 1 }}>
             <h3 className="script-font" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Той иелері:</h3>

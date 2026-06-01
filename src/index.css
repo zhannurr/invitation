@@ -15,18 +15,18 @@
 
 body {
   font-family: 'Lora', serif;
-  background-color: #e0e0e0;
+  background-color: var(--paper);
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
   color: var(--dark-brown);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
 .app-container {
-  max-width: 500px;
+  width: 100%;
   margin: 0 auto;
   min-height: 100vh;
-  background-color: var(--paper);
-  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  background-color: transparent;
   position: relative;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
 }
@@ -53,13 +53,14 @@ h2 {
 }
 
 .ornament-spinning {
-  width: 240%;
+  width: 150vmin;
+  max-width: 900px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: spin 40s linear infinite;
-  opacity: 0.35;
+  opacity: 0.15;
   pointer-events: none;
   z-index: 0;
 }
