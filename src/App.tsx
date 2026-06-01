@@ -80,15 +80,12 @@ const App = () => {
     }
   };
 
-  const [submitted, setSubmitted] = useState(false);
+  // const [submitted, setSubmitted] = useState(false);
 
-
-
-
-  const handleFormSubmit = (e: any) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  // const handleFormSubmit = (e: any) => {
+  //   e.preventDefault();
+  //   setSubmitted(true);
+  // };
 
   return (
     <>
@@ -160,19 +157,19 @@ const App = () => {
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0, overflow: 'hidden' }}>
           <motion.img 
             src="/ornament.webp" 
-            style={{ position: 'absolute', top: '30%', left: '-20%', width: '60vmin', maxWidth: '400px', opacity: 0.1 }} 
+            style={{ position: 'absolute', top: '35%', left: '-20%', width: '60vmin', maxWidth: '400px', opacity: 0.1 }} 
             animate={{ rotate: 360 }} 
             transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
           />
           <motion.img 
             src="/ornament.webp" 
-            style={{ position: 'absolute', top: '45%', right: '-25%', width: '70vmin', maxWidth: '500px', opacity: 0.08 }} 
+            style={{ position: 'absolute', top: '55%', right: '-25%', width: '70vmin', maxWidth: '500px', opacity: 0.08 }} 
             animate={{ rotate: -360 }} 
             transition={{ duration: 75, repeat: Infinity, ease: 'linear' }}
           />
           <motion.img 
             src="/ornament.webp" 
-            style={{ position: 'absolute', top: '75%', left: '10%', width: '50vmin', maxWidth: '350px', opacity: 0.12 }} 
+            style={{ position: 'absolute', top: '68%', left: '4%', width: '50vmin', maxWidth: '350px', opacity: 0.12 }} 
             animate={{ rotate: 360 }} 
             transition={{ duration: 50, repeat: Infinity, ease: 'linear' }}
           />
@@ -379,7 +376,7 @@ const App = () => {
 
 
       {/* RSVP Form - Integrated with Google Forms but custom UI */ }
-      < motion.section
+      {/* < motion.section
   className = "section rsvp-form"
   id = "rsvp"
   initial = {{ y: 50, opacity: 0 }
@@ -449,7 +446,7 @@ whileInView = {{ y: 0, opacity: 1 }}
   </motion.div>
 )
 }
-        </motion.section >
+        </motion.section > */}
 
   {/* Footer */ }
   < footer className = "section" style = {{ borderTop: '1px solid rgba(212,175,55,0.3)', marginTop: '40px' }}>
