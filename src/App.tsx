@@ -126,11 +126,11 @@ const App = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
               style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}
             >
-              <h2 className="script-font">Зейнет Жас</h2>
-              <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}> Өзбекбай Жанна</h1>
+              <h2 className="script-font">Зейнет жас</h2>
+              <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}> Өзбекбай - Жанна</h1>
               <h2 className="script-font" style={{ lineHeight: 1.5 }}>&</h2>
               <h2 className="script-font">Сүндет той</h2>
-              <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}>Санжар Ахмедияр</h1>
+              <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}>Санжар - Ахмедияр</h1>
               <p style={{ marginTop: '20px', fontFamily: 'Lora', color: '#666', fontStyle: 'italic' }}>Шақыру билеті</p>
 
               <button
@@ -207,11 +207,11 @@ const App = () => {
           </div>
 
           <div style={{ marginTop: '20px' }}>
-            <h2 className="script-font">Зейнет Жас</h2>
-             <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}> Өзбекбай Жанна</h1>
+            <h2 className="script-font">Зейнет жас</h2>
+             <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}> Өзбекбай - Жанна</h1>
               <h2 className="script-font" style={{ lineHeight: 1.5 }}>&</h2>
              <h2 className="script-font">Сүндет той</h2>
-            <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}>Санжар Ахмедияр</h1>
+            <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}>Санжар - Ахмедияр</h1>
           </div>
         </motion.section>
 
@@ -357,6 +357,9 @@ const App = () => {
 
           <div style={{ position: 'relative', zIndex: 1 }}>
             <h3 className="script-font" style={{ fontSize: '2.6rem', marginBottom: '10px' }}>Той иелері:</h3>
+              <p className="script-font" style={{ fontSize: 'clamp(2rem, 9.5vw, 3.2rem)', color: 'var(--dark-brown)', whiteSpace: 'nowrap' }}>
+              Өзбекбай & Жанна
+            </p>
             <p className="script-font" style={{ fontSize: 'clamp(2rem, 9.5vw, 3.2rem)', color: 'var(--dark-brown)', whiteSpace: 'nowrap' }}>
               Дархан & Үміт
             </p>
