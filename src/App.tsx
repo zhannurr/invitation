@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
 import githubIcon from './assets/githubicon.png';
 import dgisIcon from './assets/2gisicon.png';
-import tukaPhoto from './assets/Tuka.webp';
+import tukaPhoto from './assets/Gemini_Generated_Image_1caxa91caxa91cax 1.png';
 import backgroundMusic from './assets/music.mp3';
 import { motion, AnimatePresence } from 'framer-motion';
 
