@@ -95,6 +95,7 @@ const App = () => {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, y: '-100%' }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
+            onClick={handleOpen}
             style={{
               position: 'fixed',
               top: 0,
@@ -108,7 +109,8 @@ const App = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              overflow: 'hidden'
+              overflow: 'hidden',
+              cursor: 'pointer'
             }}
           >
             {/* Background spinning ornament */}
@@ -126,20 +128,23 @@ const App = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
               style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}
             >
+              <p style={{ fontFamily: 'Lora', color: 'var(--gold)', fontStyle: 'italic', fontSize: '2.6rem', fontWeight: 'bold', letterSpacing: '1px', marginBottom: '20px' }}>Шақыру билеті</p>
+
               <h2 className="script-font">Зейнет жас</h2>
               <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}> Өзбекбай - Жанна</h1>
               <h2 className="script-font" style={{ lineHeight: 1.5 }}>&</h2>
               <h2 className="script-font">Сүндет той</h2>
               <h1 style={{ fontSize: '1.4rem', marginTop: '10px', fontWeight: '400', color: 'var(--gold)' }}>Санжар - Ахмедияр</h1>
-              <p style={{ marginTop: '20px', fontFamily: 'Lora', color: '#666', fontStyle: 'italic' }}>Шақыру билеті</p>
 
-              <button
+              <motion.button
                 onClick={handleOpen}
                 className="submit-button"
                 style={{ marginTop: '50px', padding: '15px 50px', fontSize: '1.6rem' }}
+                animate={{ scale: [1, 1.08, 1] }}
+                transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}
               >
                 АШУ
-              </button>
+              </motion.button>
             </motion.div>
           </motion.div>
         )}
